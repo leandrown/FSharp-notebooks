@@ -1,3 +1,7 @@
-open System
+#r "nuget: Deedle"
 
-printfn "Hello F#"
+open Deedle
+
+let titanic = Frame.ReadCsv("titanic.csv")
+
+titanic.Print()
